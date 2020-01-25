@@ -12,7 +12,8 @@ kebab_regex = r"(.*?)-([a-zA-Z])"
 word = sys.argv[1]
 
 def camel(match):
-    # print("qqqqq")
+    # print(match.group(1))
+    # print(match.group(2))
 
     return match.group(1) + match.group(2).upper()
 
@@ -36,15 +37,17 @@ functions = {"pascal": pascal, "camel": camel, "kebab": kebab, "snake":snake }
 
 word = re.sub(camel_regex, functions[sys.argv[2]], word)
 
-word = re.sub(pascal_regex, functions[sys.argv[2]], word, 0)
+word = re.sub(pascal_regex, functions[sys.argv[2]], word)
 
 word = re.sub(snake_regex, functions[sys.argv[2]], word)
 
 word = re.sub(kebab_regex, functions[sys.argv[2]], word)
 
+if(sys.argv[2] == "camel"):
+    l = list(word)
+    l[0] = l[0].lower()
+    # print(l)
+    word = "".join(l)
 # print("after converting:", word)
 print(word)
-
-
-
 
