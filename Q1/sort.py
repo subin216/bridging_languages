@@ -63,8 +63,11 @@ def compare (a, b):
 
 ### MAIN ###
 
-len(sys.argv)
-str(sys.argv)
+if len(sys.argv) != 2:
+    print("Make better input pls")
+    sys.exit()
+
+
 
 f = open(str(sys.argv[1]), "r")
 inLen = f.readline()
