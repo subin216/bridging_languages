@@ -16,7 +16,7 @@ const options = commandLineArgs(optionDefinitions)
 
 const filePath = path.join(__dirname, options.input);
 const stuff = fs.readFileSync(filePath, 'utf8');
-console.log(stuff);
+console.log("Read:", stuff);
 
 const cp = spawn('python', ['cases.py', stuff, options.case]);
 

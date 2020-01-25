@@ -1,5 +1,4 @@
 import re
-import urllib.request
 import sys
 
 #regexs
