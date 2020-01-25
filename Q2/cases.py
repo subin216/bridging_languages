@@ -49,5 +49,5 @@ if(sys.argv[2] == "camel"):
     # print(l)
     word = "".join(l)
 # print("after converting:", word)
-print(word)
+sys.stdout.write(word)
 
