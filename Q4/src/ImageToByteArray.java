@@ -55,7 +55,7 @@ public class ImageToByteArray {
                                 p = (a << 24) | (0 << 16) | (0 << 8) | blue;
                                 break;
                             default:
-                                int random = p & 0xf0;
+                                int random = p & 0x43;
                                 p = (a << 24) | (0 << 16) | (0 << 6) | random;
                                 break;
 
