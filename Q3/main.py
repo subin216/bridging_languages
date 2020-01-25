@@ -3,7 +3,6 @@ import sys
 operators = ["+", "-", "/", "*"]
 mathThings = ["(", ")", operators]
 
-
 def evalPos(num1, num2):
     print("plus")
 
